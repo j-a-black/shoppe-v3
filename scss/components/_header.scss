@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px #ccc;
+  color: $text-clr-primary;
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1440px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 32px;
+    font-family: $font-secondary;
+    font-weight: 600;
+  }
+
+  .mobile-menu-icon {
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+
+    &:active {
+      background-color: papayawhip;
+    }
+  }
+}
+
+.sidebar {
+  width: 100vw;
+  height: 50vh;
+  border: 1px solid $text-clr-primary;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  &__header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__icon {
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+
+    &:active {
+      background-color: papayawhip;
+    }
+  }
+
+  &__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+  }
+}
