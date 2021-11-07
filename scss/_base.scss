@@ -6,9 +6,14 @@
   box-sizing: border-box;
 }
 
-body {
+.container {
   width: 100%;
   min-height: 100vh;
   font-family: $font-primary;
   overflow-x: hidden;
+  position: relative;
+}
+
+.no-scrolling {
+  position: fixed;
 }
