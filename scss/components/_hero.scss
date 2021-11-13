@@ -14,10 +14,12 @@
 
   &__message {
     padding: 0 5px;
+    max-width: 788px;
+    text-align: center;
   }
 
   &__title {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
     font-family: $font-secondary;
     font-size: 32px;
     color: white;
@@ -31,8 +33,14 @@
   }
 }
 
-@media screen and (min-width: 800px) {
-  .hero {
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 68px;
+    font-weight: 200;
+  }
+
+  .button-hero {
+    font-size: 22px;
   }
 }
 

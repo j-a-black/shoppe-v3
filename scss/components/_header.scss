@@ -34,6 +34,16 @@
     font-size: 32px;
     font-family: $font-secondary;
     font-weight: 600;
+    transition: color 200ms ease-in;
+
+    &:hover {
+      color: #5c471e;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   .mobile-menu-icon {

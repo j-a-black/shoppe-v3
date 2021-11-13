@@ -33,9 +33,8 @@ body {
   text-decoration: none;
   color: white;
   background: $text-clr-primary;
-  padding: 15px;
+  padding: 12px;
   border-radius: 5px;
-  // border: 2px solid $text-clr-primary;
   transition: background 200ms ease-in-out;
 
   &:hover {
@@ -45,4 +44,17 @@ body {
   &:active {
     flex-shrink: 1;
   }
+}
+
+section {
+  padding: 100px 0;
+
+  &:nth-child(odd) {
+    background: #efe4ce;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
