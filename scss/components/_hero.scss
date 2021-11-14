@@ -5,7 +5,7 @@
   max-height: 80vh;
   position: relative;
   background-image: linear-gradient(#83652a8f, #83652a3b),
-    url("https://source.unsplash.com/Bkm6wO6pHOY/640x517");
+    url("../assets/hero-sm.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 @media screen and (min-width: 640px) {
   .hero {
     background-image: linear-gradient(#83652a8f, #83652a3b),
-      url("https://source.unsplash.com/Bkm6wO6pHOY/1920x1552");
+      url("../assets/hero-md.png");
   }
 }
 
@@ -47,7 +47,7 @@
 @media screen and (min-width: 1920px) {
   .hero {
     background-image: linear-gradient(#83652a8f, #83652a3b),
-      url("https://source.unsplash.com/Bkm6wO6pHOY/2400x1940");
+      url("../assets/hero-lg.png");
   }
 }
 
