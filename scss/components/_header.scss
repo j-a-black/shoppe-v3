@@ -46,6 +46,44 @@
     }
   }
 
+  &__links {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__link {
+    a {
+      color: inherit;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 3px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 0%;
+        height: 2.5px;
+        left: 0;
+        bottom: -10px;
+        position: absolute;
+        background-color: #5c471e;
+        transition: all 0.2s ease-in;
+      }
+
+      &:hover {
+        color: #5c471e;
+        font-weight: 600;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
   .mobile-menu-icon {
     border-radius: 50%;
     padding: 10px;
@@ -110,5 +148,11 @@
     text-decoration: none;
     color: inherit;
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .mobile-menu-icon {
+    display: none;
   }
 }
