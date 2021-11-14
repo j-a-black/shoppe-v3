@@ -47,14 +47,30 @@ body {
 }
 
 section {
-  padding: 100px 0;
+  padding: 70px 0;
 
   &:nth-child(odd) {
     background: #efe4ce;
   }
 }
 
-.flex-center-row {
+.flex-center-col {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.section-header {
+  font-family: $font-secondary;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section-header {
+    font-size: 40px;
+  }
 }
