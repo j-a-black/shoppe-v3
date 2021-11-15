@@ -26,14 +26,34 @@
   }
 }
 
+.hero-shop-pg {
+  background-image: linear-gradient(#83652a8f, #83652a3b),
+    url("https://source.unsplash.com/zlUGL4hBHcw/1920x1281");
+}
+
 @media screen and (min-width: 640px) {
   .hero {
     background-image: linear-gradient(#83652a8f, #83652a3b),
       url("../assets/hero-md.png");
   }
+
+  .hero-shop-pg {
+    background-image: linear-gradient(#83652a8f, #83652a3b),
+      url("https://source.unsplash.com/zlUGL4hBHcw/1920x1281");
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(#83652a8f, #83652a3b),
+      url("../assets/hero-lg.png");
+  }
+
+  .hero-shop-pg {
+    background-image: linear-gradient(#83652a8f, #83652a3b),
+      url("https://source.unsplash.com/zlUGL4hBHcw/1920x1281");
+  }
+
   .hero__title {
     font-size: 68px;
     font-weight: 200;
@@ -41,13 +61,6 @@
 
   .button-hero {
     font-size: 22px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .hero {
-    background-image: linear-gradient(#83652a8f, #83652a3b),
-      url("../assets/hero-lg.png");
   }
 }
 
