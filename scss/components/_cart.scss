@@ -1,0 +1,11 @@
+.cart {
+  border: 1px solid green;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 768px;
+  height: 100vh;
+  background: white;
+  z-index: 10;
+}

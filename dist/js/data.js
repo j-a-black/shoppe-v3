@@ -22,7 +22,7 @@ export const productData = [
     img: "https://source.unsplash.com/cRwZACu3kQI/640x959",
     title: "Mille Feuille",
     description: "French puff pastry with custard and strawberries",
-    price: 9.99,
+    price: 12.99,
     qty: 1,
   },
   {
@@ -30,7 +30,7 @@ export const productData = [
     img: "https://source.unsplash.com/6jHpcBPw7i8/640x959",
     title: "Black Forest",
     description: "Chocolate cake with vanilla ice-cream, cherries, and fudge",
-    price: 9.99,
+    price: 16.99,
     qty: 1,
   },
   {
@@ -39,7 +39,7 @@ export const productData = [
     title: "Sweet Rolls",
     description:
       "Apple Cinnamon roll with caramel filling and vanilla frosting",
-    price: 9.99,
+    price: 13.99,
     qty: 1,
   },
 ];
