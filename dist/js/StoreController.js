@@ -3,7 +3,6 @@
 import { handleIconClick } from "./MobileMenu.js";
 import { displayProducts } from "./StoreView.js";
 import { productData } from "./data.js";
-import { changeItemQty } from "./StoreView.js";
 
 window.addEventListener("DOMContentLoaded", initApp);
 
@@ -13,5 +12,5 @@ function initApp() {
   displayProducts(productData);
   // Event delegation for dynamically created products on store page
   const productsContainer = document.querySelector(".products-container");
-  productsContainer.addEventListener("click", changeItemQty);
+  // productsContainer.addEventListener("click", changeItemQty);
 }

@@ -1,10 +1,5 @@
 // Product item increase/decrease quantity
 
-export const changeItemQty = (e) => {
-  console.log(e);
-  if (e.target.className == "increment") console.log(e.target.className);
-};
-
 // const itemQty = document.querySelector(".item-qty-js");
 // let itemQtyValue = itemQty.value;
 // const increase = () => {
@@ -24,10 +19,10 @@ export const changeItemQty = (e) => {
 
 // Displaying products on the store page
 
-export const displayProducts = async (productData) => {
+export const displayProducts = (productData) => {
   let productsContainer = document.querySelector(".products-container");
 
-  await productData.forEach((item) => {
+  productData.forEach((item) => {
     let html = "";
 
     html = `
