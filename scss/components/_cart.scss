@@ -8,4 +8,81 @@
   height: 100vh;
   background: white;
   z-index: 10;
+
+  &__item-list {
+    width: 100%;
+
+    table {
+      width: 100%;
+    }
+  }
+
+  &__item-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  &__qty-wrapper {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__qty {
+    border: 1px solid $text-clr-primary;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+  }
+
+  &__qty-decrement {
+    padding: 3px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__qty-input {
+    text-align: center;
+    color: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+  }
+
+  &__qty-increment {
+    padding: 3px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__price-body {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    position: relative;
+    font-size: 16px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    &::before {
+      content: "$";
+      font-size: 15px;
+      position: absolute;
+      top: -2px;
+      left: -12px;
+    }
+  }
 }

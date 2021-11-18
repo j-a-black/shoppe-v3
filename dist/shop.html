@@ -53,8 +53,51 @@
       <section class="flex-center-col">
         <div class="cart">
           <h3 class="cart__title">CART</h3>
-          <div class="cart__items">
-            <div class="cart__item"></div>
+          <div class="cart__item-list">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <div class="cart__item">
+                  <tr>
+                    <td>
+                      <img
+                        class="cart__item-image"
+                        src="https://source.unsplash.com/GAauSStia3s/640x853"
+                        alt="#"
+                      />
+                    </td>
+                    <td>
+                      <div class="cart__qty-wrapper">
+                        <span>Cheesecake</span>
+                        <form class="cart__qty">
+                          <span class="cart__qty-decrement">-</span>
+                          <input
+                            class="cart__qty-input"
+                            type="number"
+                            min="1"
+                            max="50"
+                            value="1"
+                          />
+                          <span class="cart__qty-increment">+</span>
+                        </form>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="cart__price-body">
+                        <span class="cart__price">9960</span>
+                        <span><i class="fas fa-trash-alt"></i></span>
+                      </div>
+                    </td>
+                  </tr>
+                </div>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="products-container">
