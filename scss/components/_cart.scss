@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   width: 100%;
-  max-width: 768px;
+  max-width: 600px;
   height: 100vh;
   background: white;
   z-index: 10;
@@ -15,6 +15,10 @@
     table {
       width: 100%;
     }
+  }
+
+  &__item {
+    border-bottom: 5px solid red;
   }
 
   &__item-image {
