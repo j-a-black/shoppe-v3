@@ -1,21 +1,23 @@
 // Product item increase/decrease quantity
 
-// const itemQty = document.querySelector(".item-qty-js");
+// const itemQty = document.querySelector(".cart__qty-input");
 // let itemQtyValue = itemQty.value;
-// const increase = () => {
-//   itemQtyValue++;
-//   console.log(itemQtyValue);
-//   itemQty.value = itemQtyValue;
-//   console.log(itemQty);
-// };
+export const increaseQty = () => {
+  // itemQtyValue++;
+  // console.log(itemQtyValue);
+  // itemQty.value = itemQtyValue;
+  // console.log(itemQty);
+  console.log("increased qty");
+};
 
-// export const decrease = () => {
-//   if (itemQtyValue < 2) return;
-//   itemQtyValue--;
-//   console.log(itemQtyValue);
-//   itemQty.value = itemQtyValue;
-//   console.log(itemQty);
-// };
+export const decreaseQty = () => {
+  // if (itemQtyValue < 2) return;
+  // itemQtyValue--;
+  // console.log(itemQtyValue);
+  // itemQty.value = itemQtyValue;
+  // console.log(itemQty);
+  console.log("decreased qty");
+};
 
 // Displaying products on the store page
 
@@ -48,4 +50,16 @@ export const displayProducts = (productData) => {
 
     productsContainer.insertAdjacentHTML("beforeend", html);
   });
+};
+
+// Add item to cart
+
+export const addItemToCart = (e) => {
+  // console.log(e);
+  if (e.target.className != "btn__submit") return;
+
+  let itemButton = e.target;
+  let item = itemButton.parentElement.parentElement.parentElement;
+  let itemId = item.getAttribute("id");
+  console.log(itemId);
 };

@@ -11,6 +11,9 @@
 
   &__header {
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__title {
@@ -20,13 +23,15 @@
     letter-spacing: 2px;
   }
 
-  &__item-list {
+  &__body {
     width: 100%;
 
     table {
       width: 100%;
     }
   }
+
+  // &__items-list{}
 
   &__table-header-left {
     text-align: start;
