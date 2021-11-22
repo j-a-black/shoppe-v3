@@ -1,27 +1,23 @@
 "use strict";
 
 import { handleIconClick } from "./MobileMenu.js";
-import {
-  displayProducts,
-  addItemToCart,
-  decreaseQty,
-  increaseQty,
-} from "./StoreView.js";
-import { productData } from "./data.js";
+import { displayProducts, addItemToCart } from "./StoreView.js";
+import { productData, cartArr } from "./data.js";
 
 window.addEventListener("DOMContentLoaded", initApp);
 
 function initApp() {
-  const navIcon = document.querySelector(".mobile-menu-icon");
-  navIcon.addEventListener("click", handleIconClick);
+  controlMobileNav();
   displayProducts(productData);
+  controlCart();
   // Event delegation for dynamically created products on store page
-  const productsContainer = document.querySelector(".products-container");
-  productsContainer.addEventListener("click", addItemToCart);
-  const qtyDecrease = document.querySelectorAll(".cart__qty-decrement");
-  loopQuerySelectorAll(qtyDecrease, "click", decreaseQty);
-  const qtyIncrease = document.querySelectorAll(".cart__qty-increment");
-  loopQuerySelectorAll(qtyIncrease, "click", increaseQty);
+  // const productsContainer = document.querySelector(".products-container");
+  // productsContainer.addEventListener("click", addItemToCart);
+
+  // const qtyDecrease = document.querySelectorAll(".cart__qty-decrement");
+  // loopQuerySelectorAll(qtyDecrease, "click", decreaseQty);
+  // const qtyIncrease = document.querySelectorAll(".cart__qty-increment");
+  // loopQuerySelectorAll(qtyIncrease, "click", increaseQty);
   // Selects the cart
 }
 
@@ -31,4 +27,14 @@ const loopQuerySelectorAll = (nodeList, eventListener, callBackFunc) => {
   for (let i = 0; i < nodeList.length; i++) {
     nodeList[i].addEventListener(`${eventListener}`, callBackFunc);
   }
+};
+
+const controlMobileNav = () => {
+  const navIcon = document.querySelector(".mobile-menu-icon");
+  navIcon.addEventListener("click", handleIconClick);
+};
+
+const controlCart = (carArr) => {
+  const addToCartBtns = document.querySelectorAll(".btn__submit");
+  loopQuerySelectorAll(addToCartBtns, "click", addItemToCart);
 };

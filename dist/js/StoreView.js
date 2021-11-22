@@ -2,22 +2,22 @@
 
 // const itemQty = document.querySelector(".cart__qty-input");
 // let itemQtyValue = itemQty.value;
-export const increaseQty = () => {
-  // itemQtyValue++;
-  // console.log(itemQtyValue);
-  // itemQty.value = itemQtyValue;
-  // console.log(itemQty);
-  console.log("increased qty");
-};
+// export const increaseQty = () => {
+//   itemQtyValue++;
+//   console.log(itemQtyValue);
+//   itemQty.value = itemQtyValue;
+//   console.log(itemQty);
+//   console.log("increased qty");
+// };
 
-export const decreaseQty = () => {
-  // if (itemQtyValue < 2) return;
-  // itemQtyValue--;
-  // console.log(itemQtyValue);
-  // itemQty.value = itemQtyValue;
-  // console.log(itemQty);
-  console.log("decreased qty");
-};
+// export const decreaseQty = () => {
+//   if (itemQtyValue < 2) return;
+//   itemQtyValue--;
+//   console.log(itemQtyValue);
+//   itemQty.value = itemQtyValue;
+//   console.log(itemQty);
+//   console.log("decreased qty");
+// };
 
 // Displaying products on the store page
 
