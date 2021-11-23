@@ -44,4 +44,4 @@ export const products = [
   },
 ];
 
-export const cartArr = [];
+export const cart = [];

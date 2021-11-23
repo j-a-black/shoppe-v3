@@ -1,5 +1,7 @@
+import { cart } from "./data.js";
+
 export const displayProducts = (products) => {
-  let productsContainer = document.querySelector(".products-container");
+  const productsContainer = document.querySelector(".products-container");
 
   products.forEach((item) => {
     let html = "";
@@ -19,11 +21,36 @@ export const displayProducts = (products) => {
           >
           <div class="product-card__content">
             <span class="product-card__price">${item.price}</span>
-            <button class="btn__submit" onclick="addToCart(${item.id})">ADD TO CART</button>
+            <button class="btn__submit">ADD TO CART</button>
           </div>
         </div>
       </div>
       `;
     productsContainer.insertAdjacentHTML("beforeend", html);
   });
+};
+
+// Cart related fuctions
+
+export const initCart = (event) => {
+  if (event.target.className !== "btn__submit") return;
+  let addToCartBtn = event.target;
+  let productDivElement =
+    addToCartBtn.parentElement.parentElement.parentElement;
+  getProductInfo(productDivElement);
+};
+
+const getProductInfo = (productDivElement) => {
+  // console.log(productDivElement);
+
+  const productInfo = {
+    // id: productDivElement.querySelector("product-card").id,
+    image: productDivElement.querySelector(".product-card__image").src,
+    title: productDivElement.getElementsByClassName("product-card__title")[0]
+      .textContent,
+    description: productDivElement.querySelector(".product-card__description")
+      .textContent,
+    price: productDivElement.querySelector(".product-card__price").textContent,
+  };
+  console.log(productInfo);
 };
