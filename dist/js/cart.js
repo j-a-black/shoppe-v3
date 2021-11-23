@@ -1,19 +1,10 @@
-"use strict";
+export const displayProducts = (products) => {
+  let productsContainer = document.querySelector(".products-container");
 
-import { handleIconClick } from "./MobileMenu.js";
-import { productData } from "./data.js";
+  products.forEach((item) => {
+    let html = "";
 
-window.addEventListener("DOMContentLoaded", initApp);
-
-function initApp() {
-  controlMobileNav();
-  const displayProducts = () => {
-    let productsContainer = document.querySelector(".products-container");
-
-    productData.forEach((item) => {
-      let html = "";
-
-      html = `
+    html = `
       <div id="${item.id}" class="product-card">
         <img
           class="product-card__image"
@@ -33,14 +24,6 @@ function initApp() {
         </div>
       </div>
       `;
-
-      productsContainer.insertAdjacentHTML("beforeend", html);
-    });
-  };
-  displayProducts();
-}
-
-const controlMobileNav = () => {
-  const navIcon = document.querySelector(".mobile-menu-icon");
-  navIcon.addEventListener("click", handleIconClick);
+    productsContainer.insertAdjacentHTML("beforeend", html);
+  });
 };

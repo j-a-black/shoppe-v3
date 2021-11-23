@@ -1,6 +1,6 @@
 // https://source.unsplash.com/{PHOTO ID}/{WIDTHxHEIGHT}
 
-export const productData = [
+export const products = [
   {
     id: 1,
     img: "https://source.unsplash.com/GAauSStia3s/640x853",
