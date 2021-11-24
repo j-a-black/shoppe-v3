@@ -41,16 +41,20 @@ export const initCart = (event) => {
 };
 
 const getProductInfo = (productDivElement) => {
-  // console.log(productDivElement);
-
   const productInfo = {
-    // id: productDivElement.querySelector("product-card").id,
+    id: productDivElement.getAttribute("id"),
     image: productDivElement.querySelector(".product-card__image").src,
-    title: productDivElement.getElementsByClassName("product-card__title")[0]
-      .textContent,
+    title: productDivElement.querySelector(".product-card__title").textContent,
     description: productDivElement.querySelector(".product-card__description")
       .textContent,
     price: productDivElement.querySelector(".product-card__price").textContent,
   };
-  console.log(productInfo);
+  addToCart(productInfo);
+};
+
+const addToCart = (productInfo) => {
+  let foundItem = cart.some((el) => el.id === productInfo.id);
+
+  if (!foundItem) cart.push(productInfo);
+  console.log(cart);
 };
