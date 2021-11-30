@@ -93,6 +93,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    &:active {
+      background: #ccc;
+    }
   }
 
   &__qty-input {
@@ -112,6 +116,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    &:active {
+      background: #ccc;
+    }
   }
 
   &__price-body {
@@ -135,6 +143,14 @@
       position: absolute;
       top: -2px;
       left: -12px;
+    }
+  }
+
+  &__delete-icon {
+    cursor: pointer;
+
+    &:active {
+      color: red;
     }
   }
 

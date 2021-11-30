@@ -2,7 +2,7 @@
 
 import { products } from "./data.js";
 import { handleIconClick } from "./mobileMenu.js";
-import { displayProducts, initCart } from "./cart.js";
+import { displayProducts, initCart, handleCartItemClicked } from "./cart.js";
 
 window.addEventListener("DOMContentLoaded", initApp);
 
@@ -13,6 +13,8 @@ function initApp() {
   // Event delegator
   const productsContainer = document.querySelector(".products-container");
   productsContainer.addEventListener("click", initCart);
+  const productsListDiv = document.querySelector(".cart__items-list");
+  productsListDiv.addEventListener("click", handleCartItemClicked);
 }
 
 // revisit
