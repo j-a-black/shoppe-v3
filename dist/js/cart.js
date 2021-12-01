@@ -84,7 +84,7 @@ const displayInCart = () => {
       </td>
       <td>
         <div class="cart__qty-wrapper">
-          <span>${product.title}</span>
+          <span data-action="title">${product.title}</span>
           <form class="cart__qty">
             <span class="cart__qty-decrement">-</span>
             <input
@@ -92,7 +92,7 @@ const displayInCart = () => {
               type="number"
               min="1"
               max="50"
-              value="1"
+              value="${product.qty}"
             />
             <span class="cart__qty-increment">+</span>
           </form>
@@ -119,12 +119,51 @@ export const handleCartItemClicked = (event) => {
 };
 
 const qtyBtnClicked = (event) => {
-  if (
-    event.target.className !== "cart__qty-decrement" &&
-    event.target.className !== "cart__qty-increment"
-  )
-    return;
-  console.log("qty clicked");
+  let itemQty = document.querySelector(".cart__qty-input");
+  const productTitle = document.querySelector(
+    '[data-action="title"]'
+  ).innerHTML;
+
+  if (event.target.className == "cart__qty-increment") {
+    cart.forEach((item) => {
+      if (item.title === productTitle) {
+        if (item.qty >= 50) return;
+        let updatedItemQty = ++item.qty;
+        itemQty.innerHTML = updatedItemQty;
+        console.log(item.qty);
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayInCart();
+    });
+  }
+  if (event.target.className == "cart__qty-decrement") {
+    cart.forEach((item) => {
+      if (item.qty < 2) return;
+      if (item.title === productTitle) {
+        let updatedItemQty = --item.qty;
+        itemQty.innerHTML = updatedItemQty;
+        console.log(item.qty);
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayInCart();
+    });
+  }
+
+  const decreaseQty = document.querySelector(".cart__qty-decrement");
+  const increaseQty = document.querySelector(".cart__qty-increment");
+
+  //   cart.forEach((item) => {
+  //     if (productTitle == item.title) {
+
+  //       decreaseQty.addEventListener("click", () => {
+  //         if (item.qty < 2) return;
+  //         itemQty--;
+  //         item.qty = itemQty;
+  //       });
+  //     }
+  //     localStorage.setItem("cart", JSON.stringify(cart));
+  //     displayInCart();
+  //   });
 };
 
 const removeBtnClicked = (event) => {
@@ -132,7 +171,12 @@ const removeBtnClicked = (event) => {
   let cartItem =
     event.target.parentElement.parentElement.parentElement.parentElement;
   let cartItemId = cartItem.getAttribute("id");
-  cart = cart.filter((item) => cartItemId !== item.id);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  displayInCart();
+
+  for (let i = cart.length - 1; i >= 0; i--) {
+    if (cart[i].id === cartItemId) {
+      cart.splice(i, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayInCart();
+    }
+  }
 };
