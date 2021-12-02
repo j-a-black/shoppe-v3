@@ -43,5 +43,3 @@ export const products = [
     qty: 1,
   },
 ];
-
-export let cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -49,6 +49,7 @@ let getProductInfo = (productDivElement) => {
     description: productDivElement.querySelector(".product-card__description")
       .textContent,
     price: productDivElement.querySelector(".product-card__price").textContent,
+    qty: 1,
   };
   return productInfo;
 };
