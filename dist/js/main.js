@@ -123,6 +123,44 @@ const updateCart = (productItem) => {
   displayItemsInCart();
 };
 
+// Increase Qty
+const handleIncreaseQtyBtnClicked = (event) => {
+  let cartItem =
+    event.target.parentElement.parentElement.parentElement.parentElement;
+  let cartItemId = cartItem.getAttribute("id");
+  console.log(cartItemId);
+  // let currentQtyValue = cartItem.querySelector(".cart__qty-input").value;
+  cart.forEach((item) => {
+    if (item.itemId == cartItemId) {
+      if (item.qty >= 50) {
+        item.qty = 50;
+        return;
+      }
+      ++item.qty;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayItemsInCart();
+    }
+  });
+};
+
+const handleDecreaseQtyBtnClicked = (event) => {
+  let cartItem =
+    event.target.parentElement.parentElement.parentElement.parentElement;
+  let cartItemId = cartItem.getAttribute("id");
+  console.log(cartItemId);
+  cart.forEach((item) => {
+    if (item.itemId == cartItemId) {
+      if (item.qty < 2) {
+        item.qty = 1;
+        return;
+      }
+      --item.qty;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayItemsInCart();
+    }
+  });
+};
+
 // Displays items in Cart
 const displayItemsInCart = () => {
   // note: cart array now pulls from local storage
@@ -175,12 +213,23 @@ const displayItemsInCart = () => {
     productsList.innerHTML = "";
     productsList.insertAdjacentHTML("beforeend", html);
   }
-  // Adding event delagators for removing items and changing quantities
+  // Adding event delagators for removing items
   const removeFromCartBtn = document.querySelectorAll('[data="delete-icon"]');
   for (let i = 0; i < removeFromCartBtn.length; i++) {
     removeFromCartBtn[i].addEventListener(
       "click",
       handleRemoveFromCartBtnClicked
     );
+  }
+
+  // Adding event delagators for changing quantities
+  const increaseQtyBtn = document.querySelectorAll(".cart__qty-increment");
+  for (let i = 0; i < increaseQtyBtn.length; i++) {
+    increaseQtyBtn[i].addEventListener("click", handleIncreaseQtyBtnClicked);
+  }
+
+  const decreaseQtyBtn = document.querySelectorAll(".cart__qty-decrement");
+  for (let i = 0; i < decreaseQtyBtn.length; i++) {
+    decreaseQtyBtn[i].addEventListener("click", handleDecreaseQtyBtnClicked);
   }
 };
