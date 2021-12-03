@@ -111,6 +111,7 @@ const removeItemFromCart = (cartItemId) => {
       cart.splice(i, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
       displayItemsInCart();
+      updateTotalPrice();
     }
   }
 };
@@ -121,6 +122,7 @@ const updateCart = (productItem) => {
   // console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
   displayItemsInCart();
+  updateTotalPrice();
 };
 
 // Increase Qty
@@ -139,10 +141,12 @@ const handleIncreaseQtyBtnClicked = (event) => {
       ++item.qty;
       localStorage.setItem("cart", JSON.stringify(cart));
       displayItemsInCart();
+      updateTotalPrice();
     }
   });
 };
 
+// Decrease Qty
 const handleDecreaseQtyBtnClicked = (event) => {
   let cartItem =
     event.target.parentElement.parentElement.parentElement.parentElement;
@@ -157,9 +161,18 @@ const handleDecreaseQtyBtnClicked = (event) => {
       --item.qty;
       localStorage.setItem("cart", JSON.stringify(cart));
       displayItemsInCart();
+      updateTotalPrice();
     }
   });
 };
+
+// Update cart qty when input field is changed
+// const handleInputFieldChanged = (event) => {
+//   event.preventDefault();
+//   let cartItem =
+//     event.target.parentElement.parentElement.parentElement.parentElement;
+//   console.log(cartItem);
+// };
 
 // Displays items in Cart
 const displayItemsInCart = () => {
@@ -189,6 +202,7 @@ const displayItemsInCart = () => {
                 min="1"
                 max="50"
                 value="${product.qty}"
+                disabled
               />
               <span class="cart__qty-increment">+</span>
             </form>
@@ -232,4 +246,28 @@ const displayItemsInCart = () => {
   for (let i = 0; i < decreaseQtyBtn.length; i++) {
     decreaseQtyBtn[i].addEventListener("click", handleDecreaseQtyBtnClicked);
   }
+
+  // const inputField = document.querySelectorAll(".cart__qty-input");
+  // for (let i = 0; i < inputField.length; i++) {
+  //   inputField[i].addEventListener("submit", handleInputFieldChanged);
+  // }
+};
+
+const updateTotalPrice = () => {
+  const totalPrice = document.querySelector(".cart__total-price");
+  const cartIconQtyDisplay = document.querySelectorAll(
+    ".small-circle-quantity"
+  );
+  let total = JSON.parse(localStorage.getItem("total")) || 0;
+  let totalQty = JSON.parse(localStorage.getItem("totalQty")) || 0;
+  // let total = JSON.parse(localStorage.getItem("total")) || 0;
+  // let totalQty = JSON.parse(localStorage.getItem("totalQty")) || 0;
+  cart.forEach((item) => {
+    total += item.qty * item.price;
+    totalQty += item.qty;
+  });
+  totalPrice.innerText = total.toFixed(2);
+  cartIconQtyDisplay.forEach((el) => (el.innerText = totalQty));
+  // localStorage.setItem("total", JSON.stringify(total));
+  // localStorage.setItem("totalQty", JSON.stringify(totalQty));
 };
