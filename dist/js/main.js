@@ -2,11 +2,13 @@
 
 import { products } from "./data.js";
 import { handleIconClick } from "./mobileMenu.js";
+import { handleShoppingCartIconClicked } from "./cartSidebar.js";
 
 window.addEventListener("DOMContentLoaded", initApp);
 
 function initApp() {
   initMobileNav();
+  initCartSidebar();
   displayProducts(products);
   updateTotalPrice();
 
@@ -24,6 +26,12 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const initMobileNav = () => {
   const navIcon = document.querySelector(".mobile-menu-icon");
   navIcon.addEventListener("click", handleIconClick);
+};
+
+// Toggle cart sidebar when shopping cart icon or arrow icon is clicked
+const initCartSidebar = () => {
+  const shoppingCartIcon = document.querySelector(".fa-shopping-cart");
+  shoppingCartIcon.addEventListener("click", handleShoppingCartIconClicked);
 };
 
 // Displays products in Shop Page DOM

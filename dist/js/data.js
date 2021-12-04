@@ -42,4 +42,28 @@ export const products = [
     price: 13.99,
     qty: 1,
   },
+  {
+    id: 6,
+    img: "https://source.unsplash.com/UKNJTb6oWCM/640x959",
+    title: "Pecan Caramel Apple",
+    description: "Fuji apple in coated generously with rich golden caramel",
+    price: 10.99,
+    qty: 1,
+  },
+  {
+    id: 7,
+    img: "https://source.unsplash.com/RlVfpigJYb8/640x959",
+    title: "Raspberry Meringue",
+    description: "Light and airy pie with Raspberry curd",
+    price: 11.99,
+    qty: 1,
+  },
+  {
+    id: 8,
+    img: "https://source.unsplash.com/6iqpLKqeaE0/640x959",
+    title: "Chocolate Torte",
+    description: "Multilayered cake filled with whipped cream and mousse",
+    price: 11.99,
+    qty: 1,
+  },
 ];

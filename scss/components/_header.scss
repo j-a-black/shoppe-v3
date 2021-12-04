@@ -37,7 +37,7 @@
   align-items: center;
 
   &__logo {
-    font-size: 28px;
+    font-size: 24px;
     font-family: $font-secondary;
     font-weight: 600;
     transition: color 200ms ease-in;
@@ -92,9 +92,15 @@
     }
   }
 
+  .cart-mobile-icon-container {
+    display: flex;
+    align-items: center;
+  }
+
   // shopping cart icon
   .fa-shopping-cart {
     cursor: pointer;
+    margin-right: 5px;
   }
   .small-circle-quantity {
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -173,6 +179,9 @@
 }
 
 @media screen and (min-width: 800px) {
+  .navbar__logo {
+    font-size: 28px;
+  }
   .mobile-menu-icon {
     display: none;
   }

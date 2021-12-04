@@ -27,13 +27,15 @@
             <li class="navbar__link"><a href="#">About</a></li>
             <li class="navbar__link"><a href="./shop.html">Shop</a></li>
           </ul>
-          <div class="cart-icon">
-            <span class="small-circle-quantity">0</span>
-            <i class="fas fa-shopping-cart fa-lg"></i>
+          <div class="cart-mobile-icon-container">
+            <div class="cart-icon">
+              <span class="small-circle-quantity">0</span>
+              <i class="fas fa-shopping-cart fa-lg"></i>
+            </div>
+            <span class="mobile-menu-icon"
+              ><i class="fas fa-bars fa-2x"></i
+            ></span>
           </div>
-          <span class="mobile-menu-icon"
-            ><i class="fas fa-bars fa-2x"></i
-          ></span>
         </nav>
         <nav class="sidebar" aria-label="mobile navigation">
           <div class="sidebar__header">
@@ -55,7 +57,7 @@
           <div class="cart__header-body-container">
             <div class="cart__header">
               <h3 class="cart__title">CART</h3>
-              <span class="sidebar__icon"
+              <span class="sidebar__icon" data-action="cart-sidebar-arrow"
                 ><i class="fas fa-arrow-left fa-2x"></i
               ></span>
             </div>
@@ -68,194 +70,7 @@
                     <th class="cart__table-header-right">Price</th>
                   </tr>
                 </thead>
-                <tbody class="cart__items-list">
-                  <!-- <tr class="cart__item">
-                    <td>
-                      <img
-                        class="cart__item-image"
-                        src="https://source.unsplash.com/GAauSStia3s/640x853"
-                        alt="#"
-                      />
-                    </td>
-                    <td>
-                      <div class="cart__qty-wrapper">
-                        <span>Cheesecake</span>
-                        <form class="cart__qty">
-                          <span class="cart__qty-decrement">-</span>
-                          <input
-                            class="cart__qty-input"
-                            type="number"
-                            min="1"
-                            max="50"
-                            value="1"
-                          />
-                          <span class="cart__qty-increment">+</span>
-                        </form>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="cart__price-body">
-                        <span class="cart__price">9960</span>
-                        <span><i class="fas fa-trash-alt"></i></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="cart__item">
-                    <td>
-                      <img
-                        class="cart__item-image"
-                        src="https://source.unsplash.com/GAauSStia3s/640x853"
-                        alt="#"
-                      />
-                    </td>
-                    <td>
-                      <div class="cart__qty-wrapper">
-                        <span>Cheesecake</span>
-                        <form class="cart__qty">
-                          <span class="cart__qty-decrement">-</span>
-                          <input
-                            class="cart__qty-input"
-                            type="number"
-                            min="1"
-                            max="50"
-                            value="1"
-                          />
-                          <span class="cart__qty-increment">+</span>
-                        </form>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="cart__price-body">
-                        <span class="cart__price">9960</span>
-                        <span><i class="fas fa-trash-alt"></i></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="cart__item">
-                    <td>
-                      <img
-                        class="cart__item-image"
-                        src="https://source.unsplash.com/GAauSStia3s/640x853"
-                        alt="#"
-                      />
-                    </td>
-                    <td>
-                      <div class="cart__qty-wrapper">
-                        <span>Cheesecake</span>
-                        <form class="cart__qty">
-                          <span class="cart__qty-decrement">-</span>
-                          <input
-                            class="cart__qty-input"
-                            type="number"
-                            min="1"
-                            max="50"
-                            value="1"
-                          />
-                          <span class="cart__qty-increment">+</span>
-                        </form>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="cart__price-body">
-                        <span class="cart__price">9960</span>
-                        <span><i class="fas fa-trash-alt"></i></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="cart__item">
-                    <td>
-                      <img
-                        class="cart__item-image"
-                        src="https://source.unsplash.com/GAauSStia3s/640x853"
-                        alt="#"
-                      />
-                    </td>
-                    <td>
-                      <div class="cart__qty-wrapper">
-                        <span>Cheesecake</span>
-                        <form class="cart__qty">
-                          <span class="cart__qty-decrement">-</span>
-                          <input
-                            class="cart__qty-input"
-                            type="number"
-                            min="1"
-                            max="50"
-                            value="1"
-                          />
-                          <span class="cart__qty-increment">+</span>
-                        </form>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="cart__price-body">
-                        <span class="cart__price">9960</span>
-                        <span><i class="fas fa-trash-alt"></i></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="cart__item">
-                    <td>
-                      <img
-                        class="cart__item-image"
-                        src="https://source.unsplash.com/GAauSStia3s/640x853"
-                        alt="#"
-                      />
-                    </td>
-                    <td>
-                      <div class="cart__qty-wrapper">
-                        <span>Cheesecake</span>
-                        <form class="cart__qty">
-                          <span class="cart__qty-decrement">-</span>
-                          <input
-                            class="cart__qty-input"
-                            type="number"
-                            min="1"
-                            max="50"
-                            value="1"
-                          />
-                          <span class="cart__qty-increment">+</span>
-                        </form>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="cart__price-body">
-                        <span class="cart__price">9960</span>
-                        <span><i class="fas fa-trash-alt"></i></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="cart__item">
-                    <td>
-                      <img
-                        class="cart__item-image"
-                        src="https://source.unsplash.com/GAauSStia3s/640x853"
-                        alt="#"
-                      />
-                    </td>
-                    <td>
-                      <div class="cart__qty-wrapper">
-                        <span>Cheesecake</span>
-                        <form class="cart__qty">
-                          <span class="cart__qty-decrement">-</span>
-                          <input
-                            class="cart__qty-input"
-                            type="number"
-                            min="1"
-                            max="50"
-                            value="1"
-                          />
-                          <span class="cart__qty-increment">+</span>
-                        </form>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="cart__price-body">
-                        <span class="cart__price">9960</span>
-                        <span><i class="fas fa-trash-alt"></i></span>
-                      </div>
-                    </td>
-                  </tr> -->
-                </tbody>
+                <tbody class="cart__items-list"></tbody>
               </table>
             </div>
           </div>
@@ -269,99 +84,7 @@
             </form>
           </div>
         </div>
-        <div class="products-container">
-          <!-- <div class="product-card">
-            <img
-              class="product-card__image"
-              src="https://source.unsplash.com/GAauSStia3s/640x853"
-              alt="shampoo bottle"
-            />
-            <div class="product-card__body">
-              <h2 class="product-card__title">Cheesecake</h2>
-              <span class="product-card__description"
-                >New York-style cheesecake baked inside a honey-graham
-                crust</span
-              >
-              <div class="product-card__content">
-                <span class="product-card__price">9.99</span>
-                <form class="product-card__form" action="">
-                  <div class="btn decrement">&minus;</div>
-                  <input
-                    class="product-card__input item-qty-js"
-                    value="1"
-                    min="1"
-                    max="50"
-                    type="number"
-                    aria-label="Enter item quantity"
-                  />
-                  <div class="btn increment">&plus;</div>
-                </form>
-                <button class="btn__submit">&#10003;</button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              class="product-card__image"
-              src="https://source.unsplash.com/GAauSStia3s/640x853"
-              alt="shampoo bottle"
-            />
-            <div class="product-card__body">
-              <h2 class="product-card__title">Cheesecake</h2>
-              <span class="product-card__description"
-                >New York-style cheesecake baked inside a honey-graham
-                crust</span
-              >
-              <div class="product-card__content">
-                <span class="product-card__price">9.99</span>
-                <form class="product-card__form" action="">
-                  <div class="btn decrement">&minus;</div>
-                  <input
-                    class="product-card__input item-qty-js"
-                    value="1"
-                    min="1"
-                    max="50"
-                    type="number"
-                    aria-label="Enter item quantity"
-                  />
-                  <div class="btn increment">&plus;</div>
-                </form>
-                <button class="btn__submit">&#10003;</button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              class="product-card__image"
-              src="https://source.unsplash.com/GAauSStia3s/640x853"
-              alt="shampoo bottle"
-            />
-            <div class="product-card__body">
-              <h2 class="product-card__title">Cheesecake</h2>
-              <span class="product-card__description"
-                >New York-style cheesecake baked inside a honey-graham
-                crust</span
-              >
-              <div class="product-card__content">
-                <span class="product-card__price">9.99</span>
-                <form class="product-card__form" action="">
-                  <div class="btn decrement">&minus;</div>
-                  <input
-                    class="product-card__input item-qty-js"
-                    value="1"
-                    min="1"
-                    max="50"
-                    type="number"
-                    aria-label="Enter item quantity"
-                  />
-                  <div class="btn increment">&plus;</div>
-                </form>
-                <button class="btn__submit">&#10003;</button>
-              </div>
-            </div>
-          </div>
-          </div> -->
-        </div>
+        <div class="products-container"></div>
       </section>
       <footer class="flex-center-col footer">
         <div class="footer__links-container">
