@@ -97,16 +97,6 @@ const handleRemoveFromCartBtnClicked = (event) => {
   removeItemFromCart(cartItemId);
 };
 
-// Item class used to push products to cart array
-// let Item = function (itemId, imgSrc, title, description, price, qty = 1) {
-//   this.itemId = parseInt(itemId);
-//   this.imgSrc = imgSrc;
-//   this.title = title;
-//   this.description = description;
-//   this.price = price;
-//   this.qty = qty;
-// };
-
 const addItemToCart = (productItem) => {
   let foundItem = cart.some((el) => el.itemId == productItem.itemId);
 

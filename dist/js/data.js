@@ -54,7 +54,7 @@ export const products = [
     id: 7,
     img: "https://source.unsplash.com/RlVfpigJYb8/640x959",
     title: "Raspberry Meringue",
-    description: "Light and airy pie with Raspberry curd",
+    description: "Light and airy pie with Raspberry and Chocolate curd",
     price: 11.99,
     qty: 1,
   },
